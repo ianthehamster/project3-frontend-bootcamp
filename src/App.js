@@ -1,17 +1,18 @@
 import React from "react";
-import logo from "./logo.png";
 import "./App.css";
+import { Outlet } from "react-router-dom";
+import NavBar from "./Components/NavBar";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-        </header>
+      <div>
+        <NavBar />
+        <div className="App">
+          <header className="App-header">
+            <Outlet />
+          </header>
+        </div>
       </div>
     );
   }
